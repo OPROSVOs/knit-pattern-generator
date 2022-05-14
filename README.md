@@ -10,12 +10,12 @@ Its originally written in German but i translated it as best as i could without 
 * Rows can be optionally just odd numbered
 * Simple colors as background
 * Very simple way of saving and loading in the browser as a temporary storage
-* All commonly used symbols plus multi column braids
+* All commonly used symbols plus multi column braids where the active one has a red border
 * A hidden description of the symbols (likely with translation errors but you get the gist)
 * Fully offline & standalone usable (only fonts may change)
 * Export the final pattern by right click -> save image as
 * Tested in Chrome 101 & FF 100 (fixed CORS errors)
-* Free as in MIT license
+* Free as in GNU GPL license
 
 ## Bugs / Improvements
 * Braids don't have corner boundary checks
