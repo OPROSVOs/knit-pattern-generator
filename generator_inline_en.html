@@ -24,7 +24,6 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
 	</style>
 </head>
 <body>
-
 <main style="padding-top:180px">
 	<div>
 	<fieldset><legend>New:</legend> <input type="text" size="3" id="x" placeholder="Height">&nbsp;X&nbsp;<input type="text" size="3" id="y" placeholder="Width">&nbsp;<input type="button" value="Generate" id="gen"><br><input type="checkbox" value="1" id="gen-mod"><label for="gen-mod">Only odd rows</label></fieldset>
@@ -32,20 +31,16 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
 	<fieldset><legend>Save:</legend> <input type="text" id="fn" placeholder="Name"><input type="button" value="Save" id="save"></fieldset>
 	<fieldset> <button onclick="$('#leg').slideToggle()">Show/Hide symbol description</button></fieldset>
 	</div>
-
 	<fieldset id="symlist" style="width:calc(100% - 40px); margin-top:.5rem;margin-top: -7px;top: 0;position:fixed;background-color:#fff;">
 		<legend>Symbols:</legend>
-		
 		<section class="sel">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiIsqHiNDgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAGElEQVRIx+3BAQEAAACAkP6v7ggKAICqAQkYAAEmVw1SAAAAAElFTkSuQmCC" class="pat" title="Muster löschen">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh8NjvnV7gAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAA6ElEQVRIx+XVsU0DQRAF0LcYG+nAzgBThPugEBIqoAC6oA9y51RABQiIkIWRBdwRMJZO1h3nk7wB8KUNdne0M/Pnf23CyDcqmTCUEXsyYxCr3CK2wCVmuMf7rik6xQIPOMtF0Rs+cs+g6qO47EP+/Qn2N/aHmLQ4+zgKGoSifir6Ba+QQqZrTV/gOpRSNXhmGueP+GxJMMYVbpo6KHAUcmyjM+Ggw5xjteB6B0X9ckOaJ5hjhXM8dVC0bOpgub5oQRnUPAdNO1VR+p8++HtO7ipmGGvrwvr8aGUY8BZ3fX60UW6aUs7HvwCayipE54l4uQAAAABJRU5ErkJggg==" class="pat" title="1 Rand M">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEhsuSPJhmAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAbklEQVRIx+3UMQqDQBSE4U+jR0jnNQM5lfdJbecRopI0LyASq2Wt3sDCvinmZx7LQq+iWpWVgAQk4AJAd5jvGPApyLxhwvwz9n/RI8JLz/OswQsj3gUN+sgBTRhL3NuoWKIGK7Z/K8pnmoAEVNAXAjkbeClnGzwAAAAASUVORK5CYII=" class="pat" title="1 li M">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiMx0mXQlgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAjUlEQVRIx+2TPQoDIRBG30Qh10ixR1RMFexS6FW2TbWw51oQTbVdEnVhIYWvHOabb34YGAwGTcQYP8ZDCFLTSofJE7inlG5a66WUMllrq3rdMcgGoJR6AauIzC0i3buunPPDOTfvqzPG/My/9BrsxYFq8UMGAN775ty/MpAjzfQceQWupz/at6cbDM7jDa6SJIrdKx+LAAAAAElFTkSuQmCC" class="pat" title="1 re M">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEhwzZLWbhgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABjElEQVRIx83Vv2sUURTF8c+uG4nBSNBgIdoJStIYiIWpXEiXSgsLQUuxs7KwsRPUyiqFbaog+g+IVmKwsBBMItgkKqKFWIg/k402RxhkdmdWs+CFVwwzc7/3vXvOfQw2Ws0BAwwc0OqjkB1o5HkLm9sFGMUpnMRwkr/EIl78y+4aOIt1fMXPwtrCRyxg799soIEzSfYZT3AOU2jjNt7l/d0ekFa35HPYwIeAyj48jPuBzGNXXcA4lvAdF9LcbnEITwM5XhfQzrE87lLVn3ExgFsYqTLaTsxiCA/S3Kp4FCGcxr4qozWxH9/wvKbaXqVXu1NgpZM7afRQH2ZtFgzYE9DBWgx1oibgCA7gfYRRGcfwCSv5sSqupsmXS3ZdqqI9uJOfbpYoo+iXGbzGDxztx8lTOapNXMfBJPy9RmLA1RRyqUvPes66abxJ495m7lzBDTzDlyS/VqaeusN0Avcy2DaSsBMjLuN8lcIaNZUymXE9lvNexsP4ZVsAChdOcWRXeqTVB6DzX97JAwf8AgMnVZfeIXK4AAAAAElFTkSuQmCC" class="pat" title="1 Umschlag">
-
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiMkv7g0fQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABYklEQVRIx+3UMUvVYRQG8N/1al7FQSRCcPAKgW4iBBI6ObgENbiIi7ba0uBXEJEG/QB+AB0dHJqKiIhAKqKmS1GzIJEiYXpbnuFPkV7tXlw88PL/wznv8z7nnOccru2qrdRg3C1MYxDf8RLvmknkGPXC+YnZZj6wheH8j+ErDltZxuVk0hLrTA++tQK8DU/CfrrZ4BVsBPxRK5hv/i94e+pbwY2AlgoqqmMFNzMP1T+E0I5u9ORbLiqkgsmcwTTwFV5nsP6lmI4A3cUUxhP/BtuoFQMrGZ49nOATJuIfysPFUw3BCbwNiV9YRW8y+sv68RAfcmEXC2c0fSlE6viIRdw+rxddeFxg9QJz6CvEDAe8htOUczF3G5rcMmbwOY98wf00bwDrOIjvGUZT5tJFVNWHe2F3ivd4iufYx4/U+07Ud+m1MB+WxW1aw1oj9S414G/DCB5ETUfYyT46SnbXdnn7DV4gTt5D4WaJAAAAAElFTkSuQmCC" class="pat" title="2 aus 1">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiMYkNdI+gAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABeklEQVRIx+3VT0uUURQG8N+oNaZBYYSBZEVB7QIREhIElwW1yIW4KbeuXLToK7SqRX2FWkaCRCslIiKQEDEIhoIaWpUhhSHoTJtn4G0RjjZDGw8c3hfOv+c859x72Zf/LaUm/Y5hHGdRRxXPsNYqIJtJXNTvGG5VgScYKnQ9gZ9YaheNp7GRwi2TWXyOVvEQvTsFdeyxoyMYaOf2jWXwj9q5ylW83w1FXSijGwdjK2Ul3+JKzsEIHoeiuQKILvTgcL6djaSSdDR6Cp/wCq+xji94WvD/hge4k9iRHMRL8X8T/0oD/YE4TuIrtvEOl2Mvox+DOInjhe5H02EdW7iLowUwf8gJTGMlAUu49Rd6u3E7QOpYxQzO7TSXQ9n5BqoXmEJfwed8kldQC50ziW1qazpxAx9S5COuZXgDuJ+roo4FXAzNpd2sZx+uBl0Ny3iOxVx0P8L3cGa0JynjZlAWb9IK7jXDd6kJewcu4DrO4Bfm8TL/tf1n9Z/kN0jBVKGwP2kqAAAAAElFTkSuQmCC" class="pat" title="3 aus 1">
-
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiMMig2chwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABHElEQVRIx83UPUoDURTF8Z/RiFECJmIftXQxbsLGRl1COtMkhVipEFyCNsZOEMTtCOJHPhybCYxh4sybTOGF0733v/eed3j8s1oLvbAccLaGM+zjpezJN9DGGCMcYrVMW9r4QBTrNW6ycFXRiyePZjTC6SLwGjop4KS+cIRKkck7mGQ0iPAWNwnyvJcDnNQnTkLTEgUqM11paQnV3HRV0S04edomv+yq4BjfJcCnesdBsskuBiXBx7jC9qxNLdyWAD9HY95Dt3CfM/+zGuIyAV+a12QHjwUa9NHMgk+rjucA+DVWQr+LerzJJMOWfhF40q5BRlqai37ZLdylwC/+SkuRTR5iu4bx5I28D5q39vCEG2yVDZ/WJtZDLvwAJSvg5qzrBUIAAAAASUVORK5CYII=" class="pat" title="1 dopp. re ueberz. Abnahme">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiI3Ih1E4gAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABYUlEQVRIx83VPUvcQRDH8c895AEOrSLEBEJAfBMXUqQNQZsTm4CdYCVok8JWSDp9AYLpgoQU6QJRUAmKWKdJRNGAdgdaiOKpzRz8Oby7/z0YbmBZGGZ/35nd2V160LL3Kf4IH/HwvgBzuEEJmW6Lv0I5AGt43k3xPnwL8er40E3AdIie4RpX+Is33RB/jX2cYgvnWA3gF/R30nIDmMVLLOI4KviBHYzgXbuZZzAVgtt4hpWo4C0moopdPGkH8CK2poyx8H0NwCgK+NzJgVe75lOioiqgFL4i/qAS25jaxkN8PbEwWwPIxpiP2J9pb/gwjnCZyLQeAAbxO+LfNxMvYCkyWsaDFABxJjfYxFAjQBF7+Iend7R0PQB8D8hk0pmvCTrAQswnLTbFTNyNjTTvfaaOv1EFkKt15O8Iuu7gWan819+pJwG52MLU6/ItAn7hAofRkqlezFbscVRxEZ9OU7sFyA9XTcRBpKoAAAAASUVORK5CYII=" class="pat" title="1 dopp. ueberz. Abnahme">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiIWbnRUvAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABnElEQVRIx7XWP0hVYRjH8Y8lpuG1wiYza6qtaKrRNBEnx3Buae2PZDREtRbkIEIoUeEQNAct6pQgQqFRECLVkGNBg//K2/JceCmP99zrvWc75zzv833f5/f8nnOo73VgX50BagVoiFxncCQraAgvca5KSB8+YwL7SyVKAx6jiFmcrjD5AL7hD26nGqRBzXgakAV05Ux+CavYxggORsn+A0ATXgTkfQ7IBXyN+LtJaWQBoA2TsWgOxzKSX0yS38hq06ydteJhLP6EozsIuhrvr6OxUgAUkpMs4WQ87w5Bi7hfzmjlBGzD80j2BlexHILeyuPkPF3SglGsYQM/cS26riajYg2vo8eb8AvzWK/VOOnFCn7gA7YwnWiypxJ143toMByaPIn7RbTvBXAeXyLZg380KQn/ER3VAHrLmCg141sczwMozY/+xEQ3dzFRAY8i7h0685ygJ3a+jXs5RCwkA3Iep3YDDIZDf8fIbczZZYcwFZAZnM0CjGMTd0LIir69eBaQV1mAE7iMw1X6pQVjuLIToKHefxXFev1V/AXVIFwgA4UOLwAAAABJRU5ErkJggg==" class="pat" title="1 kraus re M">
@@ -59,12 +54,10 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiAYu/obOQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABiUlEQVRIx73VsUtWYRQG8N+nn0iIFimBlCENYTgIDtakDUkQ0iA0SU6BOgSik4gOSf0FSkuTgxTNLQ0NWoJTg5SD4CYNEkSJmX5qyxkuwnf1Xj898MK97/vc5zzn5Tnnki0KGfGqMuK7cdU5RQ2W8PI8yAvowW/8wI1KX1E1BlCPJgzmuN7UuIs1HMVaxq1KJpgJ4mksxPNYpcg78Q0/0YJ2/MMKblciwXQonkUtLmE+9ibOSn4HX8M9DxL7D/EnztrOYs2hUPoWDYmz+tg7wvM8HS4Il7EbFj0eT/AL33E5T4L7ofAdrpTp7DeBeZonwWK4ZTAF8whb2EAxC/m9UPYpOrdc1OF9YEdkGAsfcIDxeE8zQh+2sY7G0zinKyy4ieunEFQbU3YfwyfNqCJeR8mvMtivJ775iGtpwA6solTGOSeZooRnaaDJUPIi58wqRRXNyStJjoXH8Xwz45+rEH3xF73ox9xx0FSo38NhYvZnWXtRxWe0Jiso4gtGsZN3tkSS6uDYdxHxH3DwXxrar2OnAAAAAElFTkSuQmCC" class="pat" title="3 M li zusammen">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh0w5Kf7fQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABKElEQVRIx83VPUpDQRTF8V9iomAjYqEbUIQgCCIifoBgI2KhtTtwGRbiR2khWLkEF2AtVkYQBLWyFcRCBIlmbCYQHslL8vIEB043nD9n7tx7+WdnAJMo/BVgE5cRlPsZwjU+sJh3igLWo3kd5yjlCSjhAiHqEUt5Apbx1AQIOMkTcJAwD3jBWh7mC3hoAQg4zaMW+23MGylW+zGvoJoC+MExylm/5h6+UgABrxjPAhiNjVXvAAg4ygLYiE8QutAnJnoF3HRp3tBZr40VetQbprodyVcZAN84RLHTz1nBewZAwC1mmg2TtEHsYiRj38xiO+3CXMpY6Fb30adlgi1M9zlaKthpF6/aVLCsquMZ8xKTcCzGu4uQfrZfEcMSe7Uci1zPad/WUPsF3GisM5ywzJ4AAAAASUVORK5CYII=" class="pat" title="3 M re zusammen">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh0liXoflgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABDUlEQVRIx9XWTS4EQRjG8d+0JhOJHmLlHo7gIj5CSLjBxEaIBIkgmT0bW2ewcKVhZtqmSJuY6O4qErWsVD3/qud96oN/2Dp/Ib6KDXTzxIASBY6xgpfUO1jGHUZ4xGJK8RwDDDHGQ0pAjttgURkA97GATsWWQUW8rO4gixD/KOgJNn8jkgUu8Dq1+jJFDXrB8+/EvwDylgU9D7bM1xncVPwKe3UnZA3SUuAGh01WlDVIyym22vhZ527pY7eO500BvZDzVuI/AXKcYRsLMXfIrP5L7MeexmxGWq5xlOK4Z1NpWQqe7yR6fD4tKsML1MdBAE4ixeema7CONTzhLRKQ4xnj6g+gG6I4kaaNMHwHdP89FYdk0RIAAAAASUVORK5CYII=" class="pat" title="2 M re zusammen">
-
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh8vW5mUCgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAmElEQVRIx+3VsQ3CMBCF4S+BEjpK2IAVkFiJinkYgiko2YCGHkQqUGhSuIhMYoiEwE86ydLZ77fP0h1fpCLl0CiSm2CLNS44f/rGC9RNbFJNykjugXuzvg0BCOteDAV4WxmQARnwT4A6FTDuaLzECtNIQzzh2Ac+D+ZBl9i1VST2ggr7wCDW0ksc2vYVL/5n1mMWVLj6OT0BloYflkIoxJYAAAAASUVORK5CYII=" class="pat" title="Querf. 1 M li verschr.">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEicTY2lUdgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAnElEQVRIx+3VIQ7CQBCF4Y8WSLgASDThABwGxQ2QODzH4hI4HAcgGEShNRWITbdt2gSxz22yO/+8nWQeIyvv+S7DHLP6/B0asMYRB7xwRzmk8x0eddFzU6NZT0CBJz54x/6yjyZdhjWqEiABEuCPAeXYgKLtxWlgiW2w/wmTUPdLrNo4CQG2OHVwt+gCKHHDpY7E2BxyXJsiMymqCpJkFgHxF7skAAAAAElFTkSuQmCC" class="pat" title="Querf. 1 M re verschr.">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh0XQa1OFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABlklEQVRIx7XVv0uVYRTA8Y/etLgaKMWloKGoQAdrKoK2IGgRNzeD/oOmNsHZosTM1poiAlsbqiGCprYofyw2KFSiEgZZli1HuFzv+77Pa9d3e8+v7znPOc9z2nDQ/nxtqLYyWDNZV6VOcBzD6MHnPUB6cR2H8A1b6Kg3GMI2XuPIHgCD4f8oYBqP6AxehdHVksGP4U34jtTJd/VgJIxmcDQxeHsczTZeoJYHOIW3Jas4iw/4iRsNumqzzt+qq6JWEPwAbuIP3qG7CACnMYfvCVX04CPWm2Qv7x5MR1ZP0ZUDGMUvvMzQZwJOYgGruJBhU8NyzPy1sgC4h794nqF/GL161uTskwB9+IQNnG/Q9eMr1nAl46koBHRiMq78TMPc34nsn+BwTozCx24gpukLLobsEmYD0FfgXwjoxoMINhFzPx7/d6PK/wLs9GIL7zGGeazEfdEKQCemIuvNgN1OyD4ZsDM1PwKyiMuJfsmAKh4HYDxnLHf5VRINf8em6sV9LCX6dZRZKidwDpUSPi1b+pmA9v0m/AOQRE6T0QToAQAAAABJRU5ErkJggg==" class="pat" title="1 M re tiefer">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh0Ju6JzdQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAyElEQVRIx93VwUpCQRQG4C9x08qNQW9RvoBaeH2DoGfoBXsTNwpGmoJrDUFr2sxsouDi9WwcGBhmMR+H/3CGS1jX6EUCN3jFYxTQxQfe8RwB3GKLhDUeIiqYZaAg95HA2Sv5C0hYYhwJpHw/iAQSpqgigYRFk0zqAAmrU7urLlCQYSRQuquKBErw/UigIKNIoHTXMBIowd9FAgUZRAIp/ylP/wHzMwAJb78zaeOICT7x3XDkHPCCTX7TVd4dtBoOzTa+8nmHPfwA1fDJOmrVEloAAAAASUVORK5CYII=" class="pat" title="1 ueberzogene Abnahme">
-		
 		<wbr>
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAYCAYAAAC8/X7cAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiEiZO3zygAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAB20lEQVRYw93Xy0tUcRjG8U8NhUSmm2glWZnSZVFGQQRlWev+41p0xTFoHbUx06aL2s00dabNc+DHMF0ER0+9q+EwDOd7nuf9/s7wj0+jx7UDGMYA2tiqM8C+4vMhXME0zmIJ93EPLXTqnsBh3MFdTOEyruIUNrCMtbqBlAA/8ALPMY8jGMUkrmM8dWoFpHYAndzYa8zgIRYxmJu/UNRrHXPYrOMSS2VaeBKQj0lkpAA5jy9YCVCnTgDVtPEejwIzH0ON4iJuYiIyWMHqboM0/vJ7bbzFs8AsJpHTAZnCSexPWt/qBlDNZqo1i2ZUO5hqTeIaxlLBFXyvG0AJspBlbyadoS5rjRXWWq8bQKneN4W1WqnWeKo1jTOx21w/TvXGDv3ORlJ4jAf4kERGAnK7sNZywDt1AuhlradZ9mEcD8itpAOfdsJajT5Vs7LWbGCqHamsdQMnCmut1g2gXPYKZCZmqqx1qbDWWhLZ9rtWvwHKHemLtXYLoJr1nOaltYa6rDWxHWvtNsCvrLVUvGtNxlrn8PlP1torgHLZ3xXWWujxrvVba+01QDVbUe5sUumu1lQMNpCz5GvgawPQy1rN1GcIx3AwkC9zfav7P3EdZzjnxdE8+Vep3P8zPwFX3qJb2gKluAAAAABJRU5ErkJggg==" class="pat" title="Zopf2">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAYCAYAAAC8/X7cAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh4wz4qovgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABkUlEQVRYw+3Xy0pVARSH8d85WHmOmJdQyVHosKQLhBRNKhuYRWU16kUC7TqI3qJSo1nDZr1AejQhmgYlaDUJouhi6GQd2GxsGKwNrdEe/tfa3/rW3lS8ahXIuBtdkfUrflelgRqGcAan0Y+3eIlX+A4dCYPXsQ/juI4JDMfkh/EJq+0GslUvLmEOH7CFn2jhDk6hL5pMVZ24gGcx4S1sBiozOIxmNuTrwfU5LGAjgv+Iid/FwYyY17Ef03hSQmURN3EEuzIyPoRrwfhGAZXFAiqNjDocwFRMfK2Aygoe4HjG4NCDi3hcQmU5GD+B7ozB9+A8nuJjBP+DJdwKxlNapS8Oz3zJKstVsMqVHVBpxXIezWiVGgZxNZZzvWCVJcwGKo2MEx/A5A5WeY2HYZVmZqs8wvsCKiu4h5PYm/WbfDKWs2iVFm4H410ZrdKLs6XL2bbKfRzKuJxtq1wuofKrYJVj8VZSVQcO4EYcoPW/oNLIFro4+SZGMBYn/g1e4Hk8f6vCT/0gRqOBz3iHL/7Xv6ltIH1uIb5C6swAAAAASUVORK5CYII=" class="pat" title="Zopf2">
@@ -72,9 +65,7 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAYCAYAAABZY7uwAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh4jSzTpYAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACTElEQVRYw+3Y2UtVURTH8c9FTYW6gYkJWVRkBTmVNApB/etZaZk2Ydr0oGkORFmgOdbL2rA5mETkdHS93Hs552X/7u+3vmttDmvLqhyQM/7KfteiEXXxbBU/Cu8cKIFSNeIkruAGzqKKBYziNd5gCiu5mmV2Tj2a0Y7ruIUOnIuzb+ALWnEE3zBXdoEqaAkhetEXrjmFhhBlBh/wBM/DQZ/wPRenbBGrohP3cRNdIVR9PJ/BGIbQH3GawSLWytakU3yO43y45G645nQkYxVfQ4hneIRhTGO5DBQr0qcSjbYFl9CNOxGftkJ83mIAT6P5TmKprJhvCFEuB316cTWI1BDvzIVThvAgvn+O+KyXbQ5K8TmBCyHK7QJ91oI4YxjBYDTbya1mmjII1BKRSfTpCPo0xqFz+ozgFSaCPuvb9W/tBfp04F7QpzuEyuMzHv2kGJ+1sq0alRjIivTpzOizFvQZC1ESfaaKM8p+3cUqm/SANOZfRE9GnxSfDcziPR6HMCk+S7tp7+10UP0W9GnM4jNWoM/0/6DPXhQo0afpD/Spy+gzHtQZjGab6LNR1uuORJ9rGX3aCvT5GPQZzoa3hZ1otLsl0NEQIu0+PQX6zGf06c+uEhb3uij/IlCiT7VAny6cQU0Wn7T7PMzos2yfVuUvd5/2mE/6st0nxWcW74I+Q3gZ8Vksy91JXjURndZYCHsjOl0F+qT4JPqMZvFZV6Kq3USwWhwLl3SGY5rxEy+COgPxObFX6bMTPaga021TOGcl5pb5oM+Kwzqs3x5CrJqVkPvBAAAAAElFTkSuQmCC" class="pat" title="Zopf3">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAYCAYAAAAF6fiUAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiA7GZ1qSwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACyElEQVRo3u2Z7VMSURyFnw3RfGnKYLFXNRHUhKb+/+99amomnQRNKkJnDAqN0FCJPnjuzJ2dRWTLRLp3xg+uuOA9e8557k9w60qXd8HXTQJxIKbvT4EToAW0Q+7ZcVsbXYAR4A4wCzwGngCLgA+MAk2gCnwC1oGPQE3XT9yW9rdGuly7DaSBZ0AeyAH3gAlLtAZQlgAFYA14D1SAOnAop7jVhwM8fcWAMeCWnvxZOSELPJUzksC0fq8D7ANfJMgasAFsAR/kmJbb7ugdcEMdMA7cBR4pll4AS8Ac8ACY0uvbckAV2LYc8lqC1F1P9CdAN1HG5IR5xdWKXJLW9Qkr5prAjgR4B7wCNnXtB3Ak4TpOgOj3mgRSckQGWAZWJVBK5W4iqx6IrKLEKfco9aGiLO8S72siK6HIygDPJcoc8FAOMVh7KEE21R1F9UgZ+CpBTp0Doq+4OsKXI3Lqj0VFVgK4aUVWA/gsVxSAtxJmR+45GgZBvCt831FRVkqEtaD+WLUoKyyySjp/bAh7DWUdOwH+rNBNZCUVT5kQygpGVlUiFCTKm+tGWd4Af7YgZeXlDkNZvgSLBSirZFFWEdgVZf0cRMryrplbDWXNyyErFmUFI+ubRVnrEqMUKPUrp6zrJEA3ykoGKGtJgtiRdXJBymo7B0Rfo+dQ1oIoy46s710oa/dfUtYwCRD8u8wsa0Ylng7MsnzOho52ZO1ZB8OCNcuqXRZlDasA51GWH6CsrBxzvwtlbVmzLENZ+06Av0dZvs4hebkjo9hKhlBWpQtlNaNS1v8sQJggQcpaVpfM9Ygsm7Iq/cyynAC9KcsXZWUtyjIHw/EAZZnI2tYBsaiir6n0W8Av+41G3F6Hro5K9xg40Ga+lENmFFk5OcRQ1rR+ZmZecc2zDrT5sbAH3jkg2opxNjic0uEvIXE8PeUNFfWenOH++TSo6zdUh9x5qBxQ/wAAAABJRU5ErkJggg==" class="pat" title="Zopf4">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAYCAYAAAAF6fiUAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh4XaoAd1QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACvklEQVRo3u2YW08TURSFP+wFaYVQBElKQagFKqkmGv//X5CIlUKtFKwXelGIpUiljg+sSY7jDJaklTo9+/GkmaRrr7P2dzbYutWasBLcWC/HcxYBJoEYENVZD/gBnNkGDKdiQBKYB1aBAvAQWNB5F2gAb4ED4D1wBJwAl+aHolbLvioKJIAUkAFywBMgrwasANP6rQN0gM/Aa+A+EAdOgba3AfYGBNekHL0GrAOPJfoq8ACYNfT7CjTl9DfAvpx/pJvwDbhQNDlmjNkG/G7GlAR/bjj8kRqRUN4jJ38EDoE94KXipgZ8Ac41A37aGeD/nyPAFHAPWAI2gBfAlhqwpCxHkdGRwyty9y7wCqjq/KIfscehAX6U4h2aKxJ50xMpKUOPE6AugYtACSjL8XXRjWMx9PqhmdQAXFF+byrLNyR4woCQDvBBApeAbQleA1pGpDjDcExYBJ+Si5ck9FNl+BqwbFDKJfBdwlaU3XsilqqGZluC24fYNRU3KCUnlxeAbECkuJRSVI6/E6nURSndYTg8TA0wKeWZxM5L/AWfSPFSSlkx07wJpYxjA1xKuStKSSu/XUrJeiilJ0EbBqUUgZ1BUErYGvA3SnGHZlaiFwxKmfOJFJdSduXw6qApJaw3INInpcQ8kVJVpJiU0hwmpYSlASalpAMoZcYTKS0NyiBK6Ybl4TJMSpk3dil54+Gz6ImUUwlr7lIqGqLHxi7FIWQ16AbMGpTi7lLWAyjlkxy976GUxihRyig2wKSUZAClZHwopak4KcvlO+LwxihTyr9uQD+7lIwPpQRFyqGyu+RDKWMpeD834A5Xu/AZCb4ssXNcrWbNSHEp5dzz8NlWtNQ8keJYyf+kk6CIiasJaWHilpBxTk06NiilJKcf6PwsLJRy2zNgQk5f1ICd1u1wJHJLj6K2Flw9K6mt/6p+Abt34IQIUUNnAAAAAElFTkSuQmCC" class="pat" title="Zopf4">
-
 		<br>
-
 		<div class="col " style="width:24px;height:24px;background-color:#111" data-color="#111" title="#111"></div>
 		<div class="col " style="width:24px;height:24px;background-color:#333" data-color="#333" title="#333"></div>
 		<div class="col " style="width:24px;height:24px;background-color:#555" data-color="#555" title="#555"></div>
@@ -93,35 +84,27 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
 		<div class="col " style="width:24px;height:24px;background-color:navy" data-color="navy" title="navy"></div>
 		<div class="col " style="width:24px;height:24px;background-color:fuchsia" data-color="fuchsia" title="fuchsia"></div>
 		<div class="col " style="width:24px;height:24px;background-color:purple" data-color="purple" title="purple"></div>
-		
-
-
-
-	</fieldset>
-		    
+	</fieldset>    
 	<section id="cbox">
 		<canvas id="canvas" crossorigin="anonymous"> Please activate canvas support and javascript </canvas>
 	</section>
 </main>
 <aside>
+<!-- Symbol description roughly translated -->
 <table id="leg" style="display:none;min-width:200px;">
 <thead>
 	<tr>
-		<td style="min-width:100px">
-			Symbol
-		</td>
-		<td  style="min-width:380px">
-			Definition
-		</td>
+		<td style="min-width:100px">Symbol</td>
+		<td  style="min-width:380px">Definition</td>
 	</tr>
 </thead>
 <tbody>
-	<tr><td>
-		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiIsqHiNDgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAGElEQVRIx+3BAQEAAACAkP6v7ggKAICqAQkYAAEmVw1SAAAAAElFTkSuQmCC" alt="Muster löschen">
-	</td><td>Muster Löschen <br> Delete pattern</td></tr>
-	<tr><td>
+  <tr><td>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiIsqHiNDgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAGElEQVRIx+3BAQEAAACAkP6v7ggKAICqAQkYAAEmVw1SAAAAAElFTkSuQmCC" alt="Muster löschen">
+  </td><td>Muster Löschen <br> Delete pattern</td></tr>
+  <tr><td>
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh8NjvnV7gAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAA6ElEQVRIx+XVsU0DQRAF0LcYG+nAzgBThPugEBIqoAC6oA9y51RABQiIkIWRBdwRMJZO1h3nk7wB8KUNdne0M/Pnf23CyDcqmTCUEXsyYxCr3CK2wCVmuMf7rik6xQIPOMtF0Rs+cs+g6qO47EP+/Qn2N/aHmLQ4+zgKGoSifir6Ba+QQqZrTV/gOpRSNXhmGueP+GxJMMYVbpo6KHAUcmyjM+Ggw5xjteB6B0X9ckOaJ5hjhXM8dVC0bOpgub5oQRnUPAdNO1VR+p8++HtO7ipmGGvrwvr8aGUY8BZ3fX60UW6aUs7HvwCayipE54l4uQAAAABJRU5ErkJggg==" alt="1 Rand M">
-	</td><td>1 Rand Masche <br> 1 edge mesh</td></tr>
+  </td><td>1 Rand Masche <br> 1 edge mesh</td></tr>
   <tr><td>
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEhsuSPJhmAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAbklEQVRIx+3UMQqDQBSE4U+jR0jnNQM5lfdJbecRopI0LyASq2Wt3sDCvinmZx7LQq+iWpWVgAQk4AJAd5jvGPApyLxhwvwz9n/RI8JLz/OswQsj3gUN+sgBTRhL3NuoWKIGK7Z/K8pnmoAEVNAXAjkbeClnGzwAAAAASUVORK5CYII=" alt="1 li M">
   </td><td>1 linke Masche <br> 1 purl stitch </td></tr>
@@ -132,14 +115,12 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEhwzZLWbhgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABjElEQVRIx83Vv2sUURTF8c+uG4nBSNBgIdoJStIYiIWpXEiXSgsLQUuxs7KwsRPUyiqFbaog+g+IVmKwsBBMItgkKqKFWIg/k402RxhkdmdWs+CFVwwzc7/3vXvOfQw2Ws0BAwwc0OqjkB1o5HkLm9sFGMUpnMRwkr/EIl78y+4aOIt1fMXPwtrCRyxg799soIEzSfYZT3AOU2jjNt7l/d0ekFa35HPYwIeAyj48jPuBzGNXXcA4lvAdF9LcbnEITwM5XhfQzrE87lLVn3ExgFsYqTLaTsxiCA/S3Kp4FCGcxr4qozWxH9/wvKbaXqVXu1NgpZM7afRQH2ZtFgzYE9DBWgx1oibgCA7gfYRRGcfwCSv5sSqupsmXS3ZdqqI9uJOfbpYoo+iXGbzGDxztx8lTOapNXMfBJPy9RmLA1RRyqUvPes66abxJ495m7lzBDTzDlyS/VqaeusN0Avcy2DaSsBMjLuN8lcIaNZUymXE9lvNexsP4ZVsAChdOcWRXeqTVB6DzX97JAwf8AgMnVZfeIXK4AAAAAElFTkSuQmCC" alt="1 Umschlag">
   </td><td>1 Umschlag <br> 1 Envelope stitch</td></tr>
   <tr><td>
-
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiMkv7g0fQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABYklEQVRIx+3UMUvVYRQG8N/1al7FQSRCcPAKgW4iBBI6ObgENbiIi7ba0uBXEJEG/QB+AB0dHJqKiIhAKqKmS1GzIJEiYXpbnuFPkV7tXlw88PL/wznv8z7nnOccru2qrdRg3C1MYxDf8RLvmknkGPXC+YnZZj6wheH8j+ErDltZxuVk0hLrTA++tQK8DU/CfrrZ4BVsBPxRK5hv/i94e+pbwY2AlgoqqmMFNzMP1T+E0I5u9ORbLiqkgsmcwTTwFV5nsP6lmI4A3cUUxhP/BtuoFQMrGZ49nOATJuIfysPFUw3BCbwNiV9YRW8y+sv68RAfcmEXC2c0fSlE6viIRdw+rxddeFxg9QJz6CvEDAe8htOUczF3G5rcMmbwOY98wf00bwDrOIjvGUZT5tJFVNWHe2F3ivd4iufYx4/U+07Ud+m1MB+WxW1aw1oj9S414G/DCB5ETUfYyT46SnbXdnn7DV4gTt5D4WaJAAAAAElFTkSuQmCC" alt="2 aus 1">
   </td><td>2 Maschen aus einer <br> 2 meshes from one</td></tr>
   <tr><td>
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiMYkNdI+gAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABeklEQVRIx+3VT0uUURQG8N+oNaZBYYSBZEVB7QIREhIElwW1yIW4KbeuXLToK7SqRX2FWkaCRCslIiKQEDEIhoIaWpUhhSHoTJtn4G0RjjZDGw8c3hfOv+c859x72Zf/LaUm/Y5hHGdRRxXPsNYqIJtJXNTvGG5VgScYKnQ9gZ9YaheNp7GRwi2TWXyOVvEQvTsFdeyxoyMYaOf2jWXwj9q5ylW83w1FXSijGwdjK2Ul3+JKzsEIHoeiuQKILvTgcL6djaSSdDR6Cp/wCq+xji94WvD/hge4k9iRHMRL8X8T/0oD/YE4TuIrtvEOl2Mvox+DOInjhe5H02EdW7iLowUwf8gJTGMlAUu49Rd6u3E7QOpYxQzO7TSXQ9n5BqoXmEJfwed8kldQC50ziW1qazpxAx9S5COuZXgDuJ+roo4FXAzNpd2sZx+uBl0Ny3iOxVx0P8L3cGa0JynjZlAWb9IK7jXDd6kJewcu4DrO4Bfm8TL/tf1n9Z/kN0jBVKGwP2kqAAAAAElFTkSuQmCC" alt="3 aus 1">
   </td><td>3 Maschen aus einer <br> 3 meshes from one</td></tr>
   <tr><td>
-
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiMMig2chwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABHElEQVRIx83UPUoDURTF8Z/RiFECJmIftXQxbsLGRl1COtMkhVipEFyCNsZOEMTtCOJHPhybCYxh4sybTOGF0733v/eed3j8s1oLvbAccLaGM+zjpezJN9DGGCMcYrVMW9r4QBTrNW6ycFXRiyePZjTC6SLwGjop4KS+cIRKkck7mGQ0iPAWNwnyvJcDnNQnTkLTEgUqM11paQnV3HRV0S04edomv+yq4BjfJcCnesdBsskuBiXBx7jC9qxNLdyWAD9HY95Dt3CfM/+zGuIyAV+a12QHjwUa9NHMgk+rjucA+DVWQr+LerzJJMOWfhF40q5BRlqai37ZLdylwC/+SkuRTR5iu4bx5I28D5q39vCEG2yVDZ/WJtZDLvwAJSvg5qzrBUIAAAAASUVORK5CYII=" alt="1 dopp. re ueberz. Abnahme">
   </td><td>1 doppelt rechts überzogene Abnahme <br> 1 double right covered decrease</td></tr>
   <tr><td>
@@ -179,7 +160,6 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh0liXoflgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABDUlEQVRIx9XWTS4EQRjG8d+0JhOJHmLlHo7gIj5CSLjBxEaIBIkgmT0bW2ewcKVhZtqmSJuY6O4qErWsVD3/qud96oN/2Dp/Ib6KDXTzxIASBY6xgpfUO1jGHUZ4xGJK8RwDDDHGQ0pAjttgURkA97GATsWWQUW8rO4gixD/KOgJNn8jkgUu8Dq1+jJFDXrB8+/EvwDylgU9D7bM1xncVPwKe3UnZA3SUuAGh01WlDVIyym22vhZ527pY7eO500BvZDzVuI/AXKcYRsLMXfIrP5L7MeexmxGWq5xlOK4Z1NpWQqe7yR6fD4tKsML1MdBAE4ixeema7CONTzhLRKQ4xnj6g+gG6I4kaaNMHwHdP89FYdk0RIAAAAASUVORK5CYII=" alt="2 M re zusammen">
   </td><td>2 Maschen rechts zusammen <br> 2 stitches right together</td></tr>
   <tr><td>
-
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh8vW5mUCgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAmElEQVRIx+3VsQ3CMBCF4S+BEjpK2IAVkFiJinkYgiko2YCGHkQqUGhSuIhMYoiEwE86ydLZ77fP0h1fpCLl0CiSm2CLNS44f/rGC9RNbFJNykjugXuzvg0BCOteDAV4WxmQARnwT4A6FTDuaLzECtNIQzzh2Ac+D+ZBl9i1VST2ggr7wCDW0ksc2vYVL/5n1mMWVLj6OT0BloYflkIoxJYAAAAASUVORK5CYII=" alt="Querf. 1 M li verschr.">
   </td><td>Querfaden 1 Masche links verschränkt <br> Cross thread 1 stitch interlaced left</td></tr>
   <tr><td>
@@ -192,7 +172,6 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh0Ju6JzdQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAyElEQVRIx93VwUpCQRQG4C9x08qNQW9RvoBaeH2DoGfoBXsTNwpGmoJrDUFr2sxsouDi9WwcGBhmMR+H/3CGS1jX6EUCN3jFYxTQxQfe8RwB3GKLhDUeIiqYZaAg95HA2Sv5C0hYYhwJpHw/iAQSpqgigYRFk0zqAAmrU7urLlCQYSRQuquKBErw/UigIKNIoHTXMBIowd9FAgUZRAIp/ylP/wHzMwAJb78zaeOICT7x3XDkHPCCTX7TVd4dtBoOzTa+8nmHPfwA1fDJOmrVEloAAAAASUVORK5CYII=" alt="1 ueberzogene Abnahme">
   </td><td>1 überzogene Abnahme <br> 1 covered decrease</td></tr>
   <tr><td>
-
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAYCAYAAAC8/X7cAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEiEiZO3zygAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAB20lEQVRYw93Xy0tUcRjG8U8NhUSmm2glWZnSZVFGQQRlWev+41p0xTFoHbUx06aL2s00dabNc+DHMF0ER0+9q+EwDOd7nuf9/s7wj0+jx7UDGMYA2tiqM8C+4vMhXME0zmIJ93EPLXTqnsBh3MFdTOEyruIUNrCMtbqBlAA/8ALPMY8jGMUkrmM8dWoFpHYAndzYa8zgIRYxmJu/UNRrHXPYrOMSS2VaeBKQj0lkpAA5jy9YCVCnTgDVtPEejwIzH0ON4iJuYiIyWMHqboM0/vJ7bbzFs8AsJpHTAZnCSexPWt/qBlDNZqo1i2ZUO5hqTeIaxlLBFXyvG0AJspBlbyadoS5rjRXWWq8bQKneN4W1WqnWeKo1jTOx21w/TvXGDv3ORlJ4jAf4kERGAnK7sNZywDt1AuhlradZ9mEcD8itpAOfdsJajT5Vs7LWbGCqHamsdQMnCmut1g2gXPYKZCZmqqx1qbDWWhLZ9rtWvwHKHemLtXYLoJr1nOaltYa6rDWxHWvtNsCvrLVUvGtNxlrn8PlP1torgHLZ3xXWWujxrvVba+01QDVbUe5sUumu1lQMNpCz5GvgawPQy1rN1GcIx3AwkC9zfav7P3EdZzjnxdE8+Vep3P8zPwFX3qJb2gKluAAAAABJRU5ErkJggg==" alt="Zopf2">
   </td><td>Zopf links über 2 <br> Braid left over 2</td></tr>
   <tr><td>
@@ -210,19 +189,13 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
   <tr><td>
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAYCAYAAAAF6fiUAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gUJEh4XaoAd1QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACvklEQVRo3u2YW08TURSFP+wFaYVQBElKQagFKqkmGv//X5CIlUKtFKwXelGIpUiljg+sSY7jDJaklTo9+/GkmaRrr7P2dzbYutWasBLcWC/HcxYBJoEYENVZD/gBnNkGDKdiQBKYB1aBAvAQWNB5F2gAb4ED4D1wBJwAl+aHolbLvioKJIAUkAFywBMgrwasANP6rQN0gM/Aa+A+EAdOgba3AfYGBNekHL0GrAOPJfoq8ACYNfT7CjTl9DfAvpx/pJvwDbhQNDlmjNkG/G7GlAR/bjj8kRqRUN4jJ38EDoE94KXipgZ8Ac41A37aGeD/nyPAFHAPWAI2gBfAlhqwpCxHkdGRwyty9y7wCqjq/KIfscehAX6U4h2aKxJ50xMpKUOPE6AugYtACSjL8XXRjWMx9PqhmdQAXFF+byrLNyR4woCQDvBBApeAbQleA1pGpDjDcExYBJ+Si5ck9FNl+BqwbFDKJfBdwlaU3XsilqqGZluC24fYNRU3KCUnlxeAbECkuJRSVI6/E6nURSndYTg8TA0wKeWZxM5L/AWfSPFSSlkx07wJpYxjA1xKuStKSSu/XUrJeiilJ0EbBqUUgZ1BUErYGvA3SnGHZlaiFwxKmfOJFJdSduXw6qApJaw3INInpcQ8kVJVpJiU0hwmpYSlASalpAMoZcYTKS0NyiBK6Ybl4TJMSpk3dil54+Gz6ImUUwlr7lIqGqLHxi7FIWQ16AbMGpTi7lLWAyjlkxy976GUxihRyig2wKSUZAClZHwopak4KcvlO+LwxihTyr9uQD+7lIwPpQRFyqGyu+RDKWMpeD834A5Xu/AZCb4ssXNcrWbNSHEp5dzz8NlWtNQ8keJYyf+kk6CIiasJaWHilpBxTk06NiilJKcf6PwsLJRy2zNgQk5f1ICd1u1wJHJLj6K2Flw9K6mt/6p+Abt34IQIUUNnAAAAAElFTkSuQmCC" alt="Zopf4">
   </td><td>Zopf rechts über 4 <br> Braid right over 4</td></tr>
-
-
 </table>
-<img src="desc.jpg" id="leg" style="display:none;">
+
 </aside>
 <script>
-    function _e(e){console.log('Error:',e)}
-
-
+  function _e(e){console.log('Error:',e)}
   $(window).load(function(){ 
-
     $('main').css('padding-top', $('#symlist').height());
-
     var i = 0;
     $('.pat').each(function(){$(this).attr('id', i++)});
     var canvas = document.getElementById("canvas");
@@ -267,15 +240,12 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
             ctx.strokeRect(xx, yy, b, b);
         }
         if(img.length != 0){
-			// This "taints" the canvas when loaded externally, which triggers the exception when calling toDataURL
+	    // This "taints" the canvas when loaded externally, which triggers the exception when calling toDataURL
             ctx.drawImage(document.getElementById(img.attr('id')),xx,yy);
         }
        });
-
     }
-    //load init
     function populate_load(dry){
-
       var l = $('#loads').empty().append($('<option></option>').text('- Please choose -'));
       for (var key in localStorage){
         if(key.indexOf('.sav') != -1){
@@ -284,7 +254,6 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
         }
       }
     }
-    //&copy;
     function drawc(){
         ctx.fillStyle = "#ccc";
         ctx.font = "10px sans";
@@ -302,7 +271,7 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
       var newCanvas = $('<canvas/>',{
                     id: 'canvas'
                 }).prop({
-					// border + number + grid + border
+		    // border + number + grid + border
                     width: (0  + b + ((y * b) + 1 )),
                     height:(17 + b + ((x * b) + 1 ))
                 });
